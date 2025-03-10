@@ -1,12 +1,16 @@
 [submodule "PreProc"]
 	path = PreProc
 	url = git@github.com:ATMO-IUP-UHEI/LS_PreProc.git
+    branch = main
 [submodule "RemoTeC"]
 	path = RemoTeC
 	url = git@github.com:ATMO-IUP-UHEI/LS_RemoTeC.git
+    branch = main
 [submodule "RemoTeC_run"]
 	path = RemoTeC_run
 	url = git@github.com:ATMO-IUP-UHEI/LS_RemoTeC_run.git
+    branch = main
 [submodule "matched_filter"]
 	path = matched_filter
 	url = git@github.com:ATMO-IUP-UHEI/LS_matched_filter.git
+    branch = main
