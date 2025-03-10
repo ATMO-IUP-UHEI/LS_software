@@ -26,4 +26,3 @@ else
     echo "not in root repo, skipping update."
 fi
 ```
-```
