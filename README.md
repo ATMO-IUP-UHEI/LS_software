@@ -48,15 +48,15 @@ These steps have to be run for every scenario.
 Assume we are analyzing a new scenario with name `$SCENARIO_NAME`.
 - First, download satellite data according to the instructions in (PreProc_L1B readme) and place them, for example, in `~/sds/data/raw_downloads/instrument/filename.zip`. I will refer to these file(s) as `$RAW_L1B_INPUT`.
 ```
-cd $SOFTWARE_DIR
+cd $SCENARIO_DIR/
 $SOFTWARE_DIR/PreProc/create_rundir.sh $SCENARIO_NAME
-cd $SCENARIO_NAME
+cd $SCENARIO_NAME/
 cp $RAW_L1B_INPUT tmp/spectra/
 sbatch --wait $SOFTWARE_DIR/PreProc/PreProc_L1B/slurm_job.sh enmap  # check the path in here, replace your instrument name
 python3 $SOFTWARE_DIR/PreProc/PreProc_ATM/download_scripts/download_aster.py
 python3 $SOFTWARE_DIR/PreProc/PreProc_ATM/download_scripts/download_era5.py
 python3 $SOFTWARE_DIR/PreProc/PreProc_ATM/download_scripts/download_egg4.py
-sbatch --wait $SOFTWARE_DIR/PreProc/PreProc_L1B/slurm_job.sh  # check the path in here
+sbatch --wait $SOFTWARE_DIR/PreProc/PreProc_ATM/slurm_job.sh  # check the path in here
 python3 $SOFTWARE_DIR/PreProc/create_lst.py
 cp $RTC_SETTINGS INI/
 python3 $SOFTWARE_DIR/RemoTeC_run/retrieve.py  # check settings.ini in the same folder.
@@ -70,6 +70,7 @@ These steps have to be run once, assuming you do not change anything major.
 These steps have to be run for every scenario.
 - This workflow assumes that the RemoTeC folder structure is created and the L1B preprocessor has been executed.
 ```
+cd $SCENARIO_DIR/$SCENARIO_NAME/
 python3 $SOFTWARE_DIR/matched_filter/run/matched_filter.py
 ```
 
