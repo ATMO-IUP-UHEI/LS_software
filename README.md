@@ -38,15 +38,16 @@ You may replace these with your own locations.
 
 ## Workflow for using RemoTeC
 These steps have to be run once, assuming you do not change anything major.
-- Build RemoTeC using the instructions in [RemoTeC](RemoTeC/README.md).
-- Create reference solar spectrum using the instructions in (PreProc_SOLAR readme).
-- Create cross-section databases using the instructions in (PreProc_XSDB readme).
-- Setup accounts and API tokens for (aster), (era5), (egg4). These data sources are currently hardcoded.
+- Build RemoTeC using the instructions in [RemoTeC](https://github.com/ATMO-IUP-UHEI/LS_RemoTeC/tree/main).
+- Create reference solar spectrum using the instructions in [PreProc_SOLAR](https://github.com/ATMO-IUP-UHEI/LS_PreProc/tree/main/PreProc_SOLAR).
+- Create cross-section databases using the instructions in [PreProc_XSDB](https://github.com/ATMO-IUP-UHEI/LS_PreProc/tree/main/PreProc_XSDB).
+- Setup accounts and API tokens for ASTER, ERA5, and EGG4 according to the instructions in [PreProc_ATM](https://github.com/ATMO-IUP-UHEI/LS_PreProc/tree/main/PreProc_ATM). These data sources are currently hardcoded.
 - Create `settings_RTC_retrieve.nml`. I will refer to this as `$RTC_SETTINGS`.
 
 These steps have to be run for every scenario.
+Running RemoTeC in parallel is automated using [RemoTeC_run](https://github.com/ATMO-IUP-UHEI/LS_RemoTeC_run/tree/main).
 Assume we are analyzing a new scenario with name `$SCENARIO_NAME`.
-- First, download satellite data according to the instructions in (PreProc_L1B readme) and place them, for example, in `~/sds/data/raw_downloads/instrument/filename.zip`. I will refer to these file(s) as `$RAW_L1B_INPUT`.
+- First, download satellite data according to the instructions in [PreProc_L1B](https://github.com/ATMO-IUP-UHEI/LS_PreProc/tree/main/PreProc_L1B) and place them, for example, in `~/sds/data/raw_downloads/instrument/filename.zip`. I will refer to these file(s) as `$RAW_L1B_INPUT`.
 ```
 cd $SCENARIO_DIR/
 $SOFTWARE_DIR/PreProc/create_rundir.sh $SCENARIO_NAME
@@ -65,7 +66,7 @@ You may now detach from the tmux session and check the progress using `squeue`.
 
 ## Workflow for using Matched Filter
 These steps have to be run once, assuming you do not change anything major.
-- Generate unit absorption spectra according to the instructions in (Matched_Filter).
+- Generate unit absorption spectra according to the instructions in [Matched_Filter](https://github.com/ATMO-IUP-UHEI/LS_matched_filter/tree/main).
 
 These steps have to be run for every scenario.
 - This workflow assumes that the RemoTeC folder structure is created and the L1B preprocessor has been executed.
