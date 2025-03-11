@@ -38,7 +38,7 @@ You may replace these with your own locations.
 
 ## Workflow for using RemoTeC
 These steps have to be run once, assuming you do not change anything major.
-- Build RemoTeC using the instructions in (RemoTeC readme).
+- Build RemoTeC using the instructions in [RemoTeC](RemoTeC/README.md).
 - Create reference solar spectrum using the instructions in (PreProc_SOLAR readme).
 - Create cross-section databases using the instructions in (PreProc_XSDB readme).
 - Setup accounts and API tokens for (aster), (era5), (egg4). These data sources are currently hardcoded.
