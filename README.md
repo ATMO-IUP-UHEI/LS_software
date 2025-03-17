@@ -21,7 +21,7 @@ I suggest always using a terminal multiplexer like tmux or screen, which allows 
 Clone this repository into `~/sds` using
 ```
 cd ~/sds/
-git clone --recurse-submodules https://github.com/ATMO-IUP-UHEI/LS_software
+git clone --recurse-submodules git@github.com:ATMO-IUP-UHEI/LS_software.git
 ```
 
 Create directories for the data
