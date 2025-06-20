@@ -1,0 +1,22 @@
+name: myenv
+channels:
+  - defaults
+dependencies:
+  - cartopy
+  - cdsapi
+  - cftime
+  - eccodes
+  - geos
+  - h5py
+  - matplotlib
+  - netcdf4
+  - numpy
+  - rasterio
+  - requests
+  - rioxarray
+  - scipy
+  - shapely
+  - xarray
+  - cfgrib
+  - scikit-image
+prefix: /home/hd/hd_hd/hd_gb423/.conda/envs/myenv
