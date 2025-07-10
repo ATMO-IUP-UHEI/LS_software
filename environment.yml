@@ -1,6 +1,7 @@
 name: myenv
 channels:
   - defaults
+  - conda-forge
 dependencies:
   - cartopy
   - cdsapi
@@ -19,4 +20,3 @@ dependencies:
   - xarray
   - cfgrib
   - scikit-image
-prefix: /home/hd/hd_hd/hd_gb423/.conda/envs/myenv
