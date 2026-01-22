@@ -14,3 +14,6 @@
 	path = matched_filter
 	url = git@github.com:ATMO-IUP-UHEI/LS_matched_filter.git
     branch = main
+[submodule "analysis"]
+	path = analysis
+	url = git@github.com:ATMO-IUP-UHEI/LS_analysis.git
