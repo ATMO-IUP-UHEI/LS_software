@@ -74,5 +74,3 @@ These steps have to be run for every scenario.
 cd $SCENARIO_DIR/$SCENARIO_NAME/
 python3 $SOFTWARE_DIR/matched_filter/run/matched_filter.py
 ```
-
-⚠️ TODO: make this a slurm job
