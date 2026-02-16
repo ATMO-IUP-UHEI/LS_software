@@ -21,3 +21,4 @@ dependencies:
   - xarray
   - cfgrib
   - scikit-image
+  - colour-science
