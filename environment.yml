@@ -22,3 +22,6 @@ dependencies:
   - cfgrib
   - scikit-image
   - colour-science
+  - jpeg
+  - libjpeg-turbo
+  - pillow
